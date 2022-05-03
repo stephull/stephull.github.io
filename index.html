@@ -5,41 +5,46 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="styles.css"/>
         <script src="script.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link rel="import" href="html/education.html">
     </head>
     <body>
         <div id="top">
-            <h2>Stephen Hullender</h2>
+            <h2 id="name_title">Stephen Hullender</h2>
             <div id="icons">
                 <div id="iconbin">
                     <ul>
                         <li class="iconbin_item_class">
-                            LinkedIn
+                            <a href="https://www.linkedin.com/in/shullender/" target="_blank">LinkedIn</a>
                         </li>
                         <li class="iconbin_item_class">
-                            GitHub
+                            <a href="https://www.github.com/stephull/" target="_blank">GitHub</a>
                         </li>
                     </ul>
-                </div>
-                <div id="resume">
-                    <p>RESUME</p>
                 </div>
             </div>
         </div>
         <div id="menu">
             <div id="menu_items">
-                <ul>
-                    <li class="menu_button_item_class">Index Page</li>
-                    <li class="menu_button_item_class">Education</li>
-                    <li class="menu_button_item_class">Experience</li>
-                    <li class="menu_button_item_class">Projects</li>
-                    <li class="menu_button_item_class">Volunteering</li>
-                    <li class="menu_button_item_class">Interests</li>
+                <ul id="menu_items_list">
+                    <li class="menu_items_button_class">Index</li>
+                    <li class="menu_items_button_class">Education</li>
+                    <li class="menu_items_button_class">Experience</li>
+                    <li class="menu_items_button_class">Projects</li>
+                    <li class="menu_items_button_class">Volunteer</li>
+                    <li class="menu_items_button_class">Interests</li>
                 </ul>
             </div>
+            <a href="Private/resume.pdf" download>
+                <div id="resume">
+                    <p>RESUME</p>
+                </div>
+            </a>
         </div>
         <div id="meat_and_potatoes">
-            <i>New personal website, currently working on it.</i>
-            <br>
+            <i>New personal website, currently working on it.</i><br>
             <p>Hello, my name is Stephen Hullender. I am a senior undergraduate student attending Temple University.</p>
         </div>
     </body>

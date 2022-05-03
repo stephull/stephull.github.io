@@ -1,3 +1,7 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
 html {
     background-color: white;
 }
@@ -8,6 +12,30 @@ body {
     padding: 1em 2.5em;
 }
 
+#name_title {
+    user-select: none;
+}
+
+@keyframes rainbows {
+    0% {color: red;}
+    10% {color: salmon;}
+    20% {color: orange;}
+    30% {color: yellow;}
+    40% {color: greenyellow;}
+    50% {color: green;}
+    60% {color: cornflowerblue;}
+    70% {color: blue;}
+    80% {color: slateblue;}
+    90% {color: purple;}
+}
+
+#name_title:hover {
+    animation-name: rainbows;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 #top {
     display: flex;
     flex-direction: row;
@@ -15,13 +43,17 @@ body {
 
 #iconbin ul li {
     list-style-type: none;
+    position: relative;
 }
 
 #resume {
     background-color: yellow;
     border-radius: 1em;
-    padding: 0.01em 1em;
+    padding: 0.01em 01em;
     width: fit-content;
+    height: fit-content;
+    user-select: none;
+    margin: 1em;
 }
 
 #resume:hover {
@@ -29,7 +61,18 @@ body {
 }
 
 #menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#menu_items {
     align-items: left;
+    max-width: 90%;
 }
 
 #menu_items ul {
@@ -43,11 +86,12 @@ body {
 
 #menu_items ul li {
     list-style-type: none;
-    padding: 0.1em 0.25em;
-    padding-right: 1em;
+    padding: 0.1em 0.5em;
 }
 
 #menu_items ul li:hover {
-    color: navy;
-    font-size: 1.05em;
+    color: white;
+    background-color: black;
+    border-radius: 1.5em;
+    user-select: none;
 }
