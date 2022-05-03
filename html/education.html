@@ -1,3 +1,44 @@
 <div id="education">
-    
+    <h3><u>Education</u></h3>
+    <section id="education-1">
+        <div class="edu_details">
+            <b>Temple University</b>
+                <ul style="list-style-type:none;">
+                    <li>College of Science and Technology</li>
+                    <li>B.S., Computer Science, Minor in Data Science</li>
+                    <li><i>Expecting graduation May 2023</i></li>
+                </ul>
+        </div>
+        <div>
+            <h5>Relevant coursework</h5>
+            <table id="coursework_table">
+                <tr>
+                    <th style="font-size: small;">Course</th>
+                    <th style="font-size: small;">Semester</th>
+                </tr>
+                <tr>
+                    <td>Software Design</td>
+                    <td>Spring 2022</td>
+                </tr>
+                <tr>
+                    <td>Data-Intensive and Cloud Computing</td>
+                    <td>Spring 2022</td>
+                </tr>
+            </table>
+        </div>
+    </section>
 </div>
+<!-- <script async>
+    let table = document.getElementById('coursework_table');
+    const courses = new Map([
+        ['Software Design', 'Spring 2022'],
+        ['Test', 'Spring 2022']
+    ]);
+    for (let i = 0; i < courses.size; i++) {
+        var row = table.insertRow(i);
+        var c1 = row.insertCell(0);
+        var c2 = row.insertCell(1);
+        c1.innerHTML = courses.keys()[i];
+        c2.innerHTML = courses.values()[i];
+    }
+</script> -->
