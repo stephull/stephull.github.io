@@ -1,6 +1,4 @@
 window.onload = function() {
-    const DIRECTORY = "Menu";
-
     // get the name of current html file
     const CWD = window.location.pathname;
     let pathname = CWD.substring(1).trim();
@@ -10,21 +8,26 @@ window.onload = function() {
     let milist = document.getElementById("menu_items_list");
     let mitems = Array.from(milist.querySelectorAll('.menu_items_button_class'));
 
-    /*function refineURL(src) {
-        let temp = src+".html";
-        return mitems.find(temp)
-    }*/
+    let curr = null;
+    function refine(src) {
+        let root = mitems.find((e) => e.textContent.toLowerCase().includes(src));
+        if (curr != null) curr.disabled = false;
+        curr = root;
+        curr.disabled = true;
+        return `html/${src.trim()}.html`;
+    }
 
     function requestMenuPage(src) {
-        //let srcURL = refineURL(src);
-        DOMAIN.innerHTML = ("You clicked on " + src);
+        let srcURL = refine(src);
+        DOMAIN.innerHTML = src;
+        fetch(srcURL)
+            .then((response) => response.text())
+            .then((text) => DOMAIN.innerHTML = text)
+            .catch((err) => console.error(err));
     }
 
     mitems.forEach(function(item) {
         var str = item.textContent.toLowerCase();
-        if (pathname.includes(str)) {
-            item.style.display = 'none';
-        }
         item.addEventListener('click', () => requestMenuPage(str), false);
     })
 }
