@@ -1,7 +1,4 @@
 window.onload = function() {
-    // get the name of current html file
-    const CWD = window.location.pathname;
-    let pathname = CWD.substring(1).trim();
 
     // change html depending on what user wants
     const DOMAIN = document.getElementById('meat_and_potatoes');
