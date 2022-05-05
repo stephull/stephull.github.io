@@ -1,6 +1,18 @@
+/* all contents */
+
 * {
     font-family: 'Ubuntu', sans-serif;
 }
+
+/* about  */
+
+.blockquote_about {
+    background-color:rgba(127, 244, 255, 0.363); 
+    border-radius:1em; 
+    padding:0.5em;
+}
+
+/* education */
 
 .course-item-major:hover, .course-item-major:active {
     background-color: rgba(255, 238, 0, 0.5);
@@ -13,6 +25,8 @@
 .course-item-elective:hover, .course-item-elective:active {
     background-color: rgba(195, 0, 255, 0.5);
 }
+
+/* volunteer */
 
 .vol-item, .exp-item {
     padding: 0.5em;
@@ -53,6 +67,33 @@
     animation-direction: normal;
     animation-fill-mode: forwards;
 }
+
+/* projects */
+
+.skill-div {
+    display: flex;
+    flex-direction: inline;
+}
+
+.skill-item {
+    padding: 0 0.5em;
+}
+
+.skill-item div {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-item div img {
+    max-height: 64px;
+    max-width: 64px;
+}
+
+.skill-item div b {
+    font-size: small;
+}
+
+/* main contents */
 
 html {
     background-color: white;
@@ -124,7 +165,7 @@ body {
 
 #menu_items {
     align-items: left;
-    max-width: 90%;
+    max-width: 96%;
 }
 
 #menu_items ul {

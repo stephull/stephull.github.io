@@ -3,7 +3,9 @@ window.onload = function() {
     // change html depending on what user wants
     const DOMAIN = document.getElementById('meat_and_potatoes');
     let milist = document.getElementById("menu_items_list");
-    let mitems = Array.from(milist.querySelectorAll('.menu_items_button_class'));
+    let mitems = Array.from(
+        milist.querySelectorAll('.menu_items_button_class')
+    );
 
     let curr = null;
     function refine(src) {
