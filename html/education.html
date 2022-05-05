@@ -6,50 +6,135 @@
                 <ul style="list-style-type:none;">
                     <li>College of Science and Technology</li>
                     <li>B.S., Computer Science, Minor in Data Science</li>
-                    <li><i>Expecting graduation May 2023</i></li>
+                    <li><i>Expecting graduation date: December 2022 </i></li>
                 </ul>
+        </div>  
+        <div>
+            <h5>Distinctions and Awards</h5>
+            <ul style="list-style-type:none;">
+                <li>Dean's List Fall 2020</li>
+            </ul>
         </div>
         <div>
             <h5>Relevant coursework</h5>
             <table id="coursework_table">
                 <tr>
-                    <th style="font-size: small;">Course</th>
+                    <th style="font-size: small;">Course Code</th>
+                    <th style="font-size: small;">Course Name</th>
                     <th style="font-size: small;">Semester</th>
                 </tr>
-                <tr>
+                <tr class="course-item-major">
+                    <td>CIS 4398</td>
+                    <td>Projects in Computer Science</td>
+                    <td>Fall 2022</td>
+                </tr>
+                <tr class="course-item-minor">
+                    <td>CIS 4526</td>
+                    <td>Foundations of Machine Learning</td>
+                    <td>Fall 2022</td>
+                </tr>
+                <tr class="course-item-elective">
+                    <td>CIS 4360</td>
+                    <td>Seminar on Topics in Computer Science</td>
+                    <td>Fall 2022</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 3296</td>
                     <td>Software Design</td>
                     <td>Spring 2022</td>
                 </tr>
-                <tr>
+                <tr class="course-item-minor">
+                    <td>CIS 4517</td>
                     <td>Data-Intensive and Cloud Computing</td>
                     <td>Spring 2022</td>
                 </tr>
-                <tr>
+                <tr class="course-item-minor">
+                    <td>CIS 3715</td>
                     <td>Principles of Data Science</td>
                     <td>Spring 2022</td>
                 </tr>
-                <tr>
-                    <td>Introduction to Mobile Application Development</td>
+                <tr class="course-item-elective">
+                    <td>MATH 243</td>
+                    <td>Calculus III</td>
+                    <td>Spring 2022</td>
+                </tr>
+                <tr class="course-item-elective">
+                    <td>CIS 3515</td>
+                    <td>Intro. to Mobile Application Development</td>
                     <td>Fall 2021</td>
                 </tr>
-                <tr>
-                    <td></td>
+                <tr class="course-item-elective">
+                    <td>CIS 3319</td>
+                    <td>Wireless Networks and Security</td>
+                    <td>Fall 2021</td>
                 </tr>
-            </table>
+                <tr class="course-item-major">
+                    <td>CIS 3223</td>
+                    <td>Data Structures and Algorithms</td>
+                    <td>Fall 2021</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 3207</td>
+                    <td>Systems Programming & Operating Systems</td>
+                    <td>Spring 2021</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 2166</td>
+                    <td>Mathematical Concepts in Computing II</td>
+                    <td>Spring 2021</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 2033</td>
+                    <td>Computational Probability and Statistics</td>
+                    <td>Spring 2021</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 2107</td>
+                    <td>Computer Systems & Low-level Programming</td>
+                    <td>Fall 2020</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 2168</td>
+                    <td>Data Structures</td>
+                    <td>Fall 2020</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>MATH 142</td>
+                    <td>Calculus II</td>
+                    <td>Fall 2020</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 1166</td>
+                    <td>Mathematical Concepts in Computing I</td>
+                    <td>Summer 2020</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 1068</td>
+                    <td>Program Design and Abstraction</td>
+                    <td>Summer 2020</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>MATH 141</td>
+                    <td>Calculus I</td>
+                    <td>Fall 2019</td>
+                </tr>
+                <tr class="course-item-major">
+                    <td>CIS 1057</td>
+                    <td>Intro. to Programming in C</td>
+                    <td>Spring 2019</td>
+                </tr>
+            </table><br>
+            <div style="display: flex; flex-direction:column; max-width:fit-content">
+                <small style="background-color: rgba(255, 238, 0, 0.5);">
+                    Computer science requirements
+                </small>
+                <small style="background-color: rgba(89, 255, 0, 0.5);">
+                    Data science requirements
+                </small>
+                <small style="background-color: rgba(195, 0, 255, 0.5);">
+                    C.S. electives
+                </small>
+            </div>
         </div>
     </section>
 </div>
-<!-- <script async>
-    let table = document.getElementById('coursework_table');
-    const courses = new Map([
-        ['Software Design', 'Spring 2022'],
-        ['Test', 'Spring 2022']
-    ]);
-    for (let i = 0; i < courses.size; i++) {
-        var row = table.insertRow(i);
-        var c1 = row.insertCell(0);
-        var c2 = row.insertCell(1);
-        c1.innerHTML = courses.keys()[i];
-        c2.innerHTML = courses.values()[i];
-    }
-</script> -->

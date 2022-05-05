@@ -2,6 +2,58 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+.course-item-major:hover, .course-item-major:active {
+    background-color: rgba(255, 238, 0, 0.5);
+}
+
+.course-item-minor:hover, .course-item-minor:active {
+    background-color: rgba(89, 255, 0, 0.5);
+}
+
+.course-item-elective:hover, .course-item-elective:active {
+    background-color: rgba(195, 0, 255, 0.5);
+}
+
+.vol-item, .exp-item {
+    padding: 0.5em;
+}
+
+@keyframes vol-item-hover {
+    0% {
+        background-color: lightskyblue;
+        border-radius: 0em;
+        padding: 0.5em;
+    }
+    25% {
+        background-color: rgb(146, 209, 248);
+        border-radius: 0.1em;
+        padding: 0.625em;
+    }
+    50% {
+        background-color: rgb(166, 217, 248);
+        border-radius: 0.25em;
+        padding: 0.75em;
+    }
+    75% {
+        background-color: rgb(182, 223, 248);
+        border-radius: 0.5em;
+        padding: 0.875em;
+    }
+    100% {
+        background-color: rgb(197, 227, 245);
+        border-radius: 1em;
+        padding: 1em;
+    }
+}
+
+.vol-item:hover, .vol-item:active, .exp-item:hover, .exp-item:active {
+    animation-name: vol-item-hover;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
 html {
     background-color: white;
 }
@@ -29,7 +81,7 @@ body {
     90% {color: purple;}
 }
 
-#name_title:hover {
+#name_title:hover, #name_title:active {
     animation-name: rainbows;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -56,7 +108,7 @@ body {
     margin: 1em;
 }
 
-#resume:hover {
+#resume:hover, #resume:active {
     background-color:gold;
 }
 
@@ -89,7 +141,7 @@ body {
     padding: 0.1em 0.5em;
 }
 
-#menu_items ul li:hover {
+#menu_items ul li:hover, #menu_items ul li:active {
     color: white;
     background-color: black;
     border-radius: 1.5em;
