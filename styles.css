@@ -4,6 +4,13 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+:root {
+    --main-bg: white;
+    --main-fg: lightskyblue;
+    --dark-bg: rgb(36, 36, 36);
+    --dark-fg: rgb(74, 119, 254);
+}
+
 /* about  */
 
 .blockquote_about {
@@ -24,48 +31,6 @@
 
 .course-item-elective:hover, .course-item-elective:active {
     background-color: rgba(195, 0, 255, 0.5);
-}
-
-/* volunteer */
-
-.vol-item, .exp-item {
-    padding: 0.5em;
-}
-
-@keyframes vol-item-hover {
-    0% {
-        background-color: lightskyblue;
-        border-radius: 0em;
-        padding: 0.5em;
-    }
-    25% {
-        background-color: rgb(146, 209, 248);
-        border-radius: 0.1em;
-        padding: 0.625em;
-    }
-    50% {
-        background-color: rgb(166, 217, 248);
-        border-radius: 0.25em;
-        padding: 0.75em;
-    }
-    75% {
-        background-color: rgb(182, 223, 248);
-        border-radius: 0.5em;
-        padding: 0.875em;
-    }
-    100% {
-        background-color: rgb(197, 227, 245);
-        border-radius: 1em;
-        padding: 1em;
-    }
-}
-
-.vol-item:hover, .vol-item:active, .exp-item:hover, .exp-item:active {
-    animation-name: vol-item-hover;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
 }
 
 /* projects */
@@ -93,14 +58,68 @@
     font-size: small;
 }
 
+.proj-item-top {
+    display: inline;
+}
+
+.proj-item ul {
+    list-style-type: none;
+}
+
+.proj-pic {
+    max-width: 250px;
+}
+
+/* other non-main contents*/
+
+.vol-item, .exp-item, .proj-item {
+    padding: 0.5em;
+}
+
+@keyframes item-hover {
+    0% {
+        background-color: lightskyblue;
+        border-radius: 0em;
+        padding: 0.5em;
+    }
+    25% {
+        background-color: rgb(146, 209, 248);
+        border-radius: 0.1em;
+        padding: 0.625em;
+    }
+    50% {
+        background-color: rgb(166, 217, 248);
+        border-radius: 0.25em;
+        padding: 0.75em;
+    }
+    75% {
+        background-color: rgb(182, 223, 248);
+        border-radius: 0.5em;
+        padding: 0.875em;
+    }
+    100% {
+        background-color: rgb(197, 227, 245);
+        border-radius: 1em;
+        padding: 1em;
+    }
+}
+
+.vol-item:hover, .vol-item:active, .exp-item:hover, .exp-item:active, .proj-item:hover, .proj-item:active {
+    animation-name: item-hover;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
 /* main contents */
 
 html {
-    background-color: white;
+    background-color: var(--main-bg);
 }
 
 body {
-    background-color: lightskyblue;
+    background-color: var(--main-fg);
     border-radius: 2em;
     padding: 1em 2.5em;
 }
