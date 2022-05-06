@@ -29,4 +29,11 @@ window.onload = function() {
         var str = item.textContent.toLowerCase();
         item.addEventListener('click', () => requestMenuPage(str), false);
     })
+
+    // enable dark and/or light mode
+    function toggleDarkMode() {
+        window.alert("COMING SOON!\n(will also fix positioning too)");
+    }
+    let darkMode = document.getElementById("dark-a");
+    darkMode.addEventListener('click', () => toggleDarkMode())
 }
