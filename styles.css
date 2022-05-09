@@ -13,29 +13,44 @@
     --main-menu-item: black;
     --main-menu-item-b: black;
     --about-blockquote: rgba(127, 244, 255, 0.363);
+    --hover-item-15: var(--main-fg);
+    --hover-item-25: rgb(146, 209, 248);
+    --hover-item-35: rgb(166, 217, 248);
+    --hover-item-45: rgb(182, 223, 248);
+    --hover-item-55: rgb(197, 227, 245);
 }
 
 :root.dark {
     --main-bg: rgb(36, 36, 36);
-    --main-fg: rgb(62, 69, 201);
+    --main-fg: rgb(103, 108, 208);
     --main-op: white;
     --main-resume: rgb(188, 188, 0);
     --main-resume-hover: rgb(179, 152, 0);
-    --main-menu-item: rgb(62, 69, 201);
-    --main-menu-item-b: rgb(62, 69, 201);
+    --main-menu-item: var(--main-fg);
+    --main-menu-item-b: var(--main-fg);
     --about-blockquote: rgba(127, 244, 255, 0.363);
+    --hover-item-15: var(--main-fg);
+    --hover-item-25: rgb(115, 120, 220);
+    --hover-item-35: rgb(126, 131, 226);
+    --hover-item-45: rgb(138, 143, 233);
+    --hover-item-55: rgb(151, 156, 249);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --main-bg: rgb(36, 36, 36);
-        --main-fg: rgb(62, 69, 201);
+        --main-fg: rgb(103, 108, 208);
         --main-op: white;
         --main-resume: rgb(188, 188, 0);
         --main-resume-hover: rgb(179, 152, 0);
-        --main-menu-item: rgb(62, 69, 201);
-        --main-menu-item-b: rgb(62, 69, 201);
+        --main-menu-item: var(--main-fg);
+        --main-menu-item-b: var(--main-fg);
         --about-blockquote: rgba(127, 244, 255, 0.363);
+        --hover-item-15: var(--main-fg);
+        --hover-item-25: rgb(115, 120, 220);
+        --hover-item-35: rgb(126, 131, 226);
+        --hover-item-45: rgb(138, 143, 233);
+        --hover-item-55: rgb(151, 156, 249);
     }
 }
 
@@ -69,7 +84,12 @@
 }
 
 .skill-item {
-    padding: 0 0.5em;
+    padding: 0.5em 0.5em;
+}
+
+.skill-item:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1em;
 }
 
 .skill-item div {
@@ -90,10 +110,6 @@
     display: inline;
 }
 
-.proj-item ul {
-    list-style-type: none;
-}
-
 .proj-pic {
     max-width: 250px;
 }
@@ -106,27 +122,27 @@
 
 @keyframes item-hover {
     0% {
-        background-color: lightskyblue;
+        background-color: var(--hover-item-15);
         border-radius: 0em;
         padding: 0.5em;
     }
     25% {
-        background-color: rgb(146, 209, 248);
+        background-color: var(--hover-item-25);
         border-radius: 0.1em;
         padding: 0.625em;
     }
     50% {
-        background-color: rgb(166, 217, 248);
+        background-color: var(--hover-item-35);
         border-radius: 0.25em;
         padding: 0.75em;
     }
     75% {
-        background-color: rgb(182, 223, 248);
+        background-color: var(--hover-item-45);
         border-radius: 0.5em;
         padding: 0.875em;
     }
     100% {
-        background-color: rgb(197, 227, 245);
+        background-color: var(--hover-item-55);
         border-radius: 1em;
         padding: 1em;
     }
@@ -162,7 +178,7 @@ body {
 #resume {
     background-color: var(--main-resume);
     border-radius: 1em;
-    padding: 0.01em 01em;
+    padding: 0.01em 0.75em;
     width: fit-content;
     height: fit-content;
     user-select: none;

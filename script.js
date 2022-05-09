@@ -31,16 +31,7 @@ window.onload = function() {
     })
 
     // enable dark and/or light mode
-    let darkMode = document.getElementById("dark-a");
-    darkMode.addEventListener('click', function() {
-        const temp = document.getElementById('dark-test');
-        temp.innerHTML = "Changing color scheme...";
-        setTimeout(function() {
-            temp.innerHTML = "";
-            detectDarkMode();
-        }, 2000)
-    })
-
+    // SOURCE: https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting
     function detectDarkMode() {
         var c = document.documentElement.classList;
         if (c.contains('light')) {
@@ -52,7 +43,17 @@ window.onload = function() {
         } else {
             c.add(
                 (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-            ) ? "dark" : "light");
+            ) ? "light" : "dark");
         }
     }
+
+    let darkMode = document.getElementById("dark-a");
+    darkMode.addEventListener('click', function() {
+        const temp = document.getElementById('dark-test');
+        temp.innerHTML = "Changing color scheme...";
+        setTimeout(function() {
+            temp.innerHTML = "";
+            detectDarkMode();
+        }, 2000)
+    })
 }
