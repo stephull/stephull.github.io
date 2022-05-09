@@ -30,6 +30,25 @@ window.onload = function() {
         item.addEventListener('click', () => requestMenuPage(str), false);
     })
 
+    // for education, make a timer for until graduation
+    // SOURCE: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_countdown 
+    var gradDay = new Date("Dec 15, 2022 00:00:00").getTime();
+    let countdown = document.getElementById('countdown-p');
+    var x = setInterval(function() {
+        var now = new Date().getTime();
+        var dist = gradDay - now;
+        console.log(dist);
+        var d = Math.floor(dist / (1000 * 60 * 60 * 24));
+        var h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+        var s = Math.floor((dist % (1000 * 60)) / 1000);
+        countdown.innerHTML = `Countdown to graduation: ${d} days, ${h} hours, ${m} minutes, and ${s} seconds!`;
+        if (dist < 0) {
+            clearInterval(x);
+            countdown.innerHTML = "Graduated!";
+        }
+    }, 1000);
+
     // enable dark and/or light mode
     // SOURCE: https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting
     function detectDarkMode() {
