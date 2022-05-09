@@ -31,9 +31,28 @@ window.onload = function() {
     })
 
     // enable dark and/or light mode
-    function toggleDarkMode() {
-        window.alert("COMING SOON!\n(will also fix positioning too)");
-    }
     let darkMode = document.getElementById("dark-a");
-    darkMode.addEventListener('click', () => toggleDarkMode())
+    darkMode.addEventListener('click', function() {
+        const temp = document.getElementById('dark-test');
+        temp.innerHTML = "Changing color scheme...";
+        setTimeout(function() {
+            temp.innerHTML = "";
+            detectDarkMode();
+        }, 2000)
+    })
+
+    function detectDarkMode() {
+        var c = document.documentElement.classList;
+        if (c.contains('light')) {
+            c.remove("light");
+            c.add("dark");
+        } else if (c.contains("dark")) {
+            c.remove("dark");
+            c.add("light");
+        } else {
+            c.add(
+                (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+            ) ? "dark" : "light");
+        }
+    }
 }

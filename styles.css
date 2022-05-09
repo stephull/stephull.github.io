@@ -4,17 +4,45 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
-:root {
+:root, :root.light {
     --main-bg: white;
     --main-fg: lightskyblue;
-    --dark-bg: rgb(36, 36, 36);
-    --dark-fg: rgb(74, 119, 254);
+    --main-op: black;
+    --main-resume: yellow;
+    --main-resume-hover: gold;
+    --main-menu-item: black;
+    --main-menu-item-b: black;
+    --about-blockquote: rgba(127, 244, 255, 0.363);
+}
+
+:root.dark {
+    --main-bg: rgb(36, 36, 36);
+    --main-fg: rgb(62, 69, 201);
+    --main-op: white;
+    --main-resume: rgb(188, 188, 0);
+    --main-resume-hover: rgb(179, 152, 0);
+    --main-menu-item: rgb(62, 69, 201);
+    --main-menu-item-b: rgb(62, 69, 201);
+    --about-blockquote: rgba(127, 244, 255, 0.363);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg: rgb(36, 36, 36);
+        --main-fg: rgb(62, 69, 201);
+        --main-op: white;
+        --main-resume: rgb(188, 188, 0);
+        --main-resume-hover: rgb(179, 152, 0);
+        --main-menu-item: rgb(62, 69, 201);
+        --main-menu-item-b: rgb(62, 69, 201);
+        --about-blockquote: rgba(127, 244, 255, 0.363);
+    }
 }
 
 /* about  */
 
 .blockquote_about {
-    background-color:rgba(127, 244, 255, 0.363); 
+    background-color:var(--about-blockquote);
     border-radius:1em; 
     padding:0.5em;
 }
@@ -132,7 +160,7 @@ body {
 }
 
 #resume {
-    background-color: yellow;
+    background-color: var(--main-resume);
     border-radius: 1em;
     padding: 0.01em 01em;
     width: fit-content;
@@ -142,7 +170,7 @@ body {
 }
 
 #resume:hover, #resume:active {
-    background-color:gold;
+    background-color: var(--main-resume-hover);
 }
 
 #dark-a {
@@ -221,7 +249,8 @@ body {
     flex-direction: row;
     font-weight: bold;
     padding: 1em;
-    background-color: white;
+    color: var(--main-menu-item);
+    background-color: var(--main-bg);
     border-radius: 1em;
 }
 
@@ -231,8 +260,8 @@ body {
 }
 
 #menu_items ul li:hover, #menu_items ul li:active {
-    color: white;
-    background-color: black;
+    color: var(--main-bg);
+    background-color: var(--main-menu-item-b);
     border-radius: 1.5em;
     user-select: none;
 }
