@@ -5,6 +5,7 @@
 }
 
 :root, :root.light {
+    --text-color: black;
     --main-bg: white;
     --main-fg: lightskyblue;
     --main-op: black;
@@ -21,36 +22,38 @@
 }
 
 :root.dark {
-    --main-bg: rgb(36, 36, 36);
-    --main-fg: rgb(103, 108, 208);
+    --text-color: rgb(207, 207, 207);
+    --main-bg: #181a1e;
+    --main-fg: rgb(27, 40, 138);
     --main-op: white;
     --main-resume: rgb(188, 188, 0);
     --main-resume-hover: rgb(179, 152, 0);
     --main-menu-item: var(--main-fg);
-    --main-menu-item-b: var(--main-fg);
+    --main-menu-item-b: var(--main-op);
     --about-blockquote: rgba(127, 244, 255, 0.363);
     --hover-item-15: var(--main-fg);
-    --hover-item-25: rgb(115, 120, 220);
-    --hover-item-35: rgb(126, 131, 226);
-    --hover-item-45: rgb(138, 143, 233);
-    --hover-item-55: rgb(151, 156, 249);
+    --hover-item-25: rgb(30, 43, 147);
+    --hover-item-35: rgb(32, 47, 158);
+    --hover-item-45: rgb(36, 52, 174);
+    --hover-item-55: rgb(39, 56, 186);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --main-bg: rgb(36, 36, 36);
-        --main-fg: rgb(103, 108, 208);
+        --text-color: rgb(207, 207, 207);
+        --main-bg: #181a1e;
+        --main-fg: rgb(27, 40, 138);
         --main-op: white;
         --main-resume: rgb(188, 188, 0);
         --main-resume-hover: rgb(179, 152, 0);
         --main-menu-item: var(--main-fg);
-        --main-menu-item-b: var(--main-fg);
+        --main-menu-item-b: var(--main-op);
         --about-blockquote: rgba(127, 244, 255, 0.363);
         --hover-item-15: var(--main-fg);
-        --hover-item-25: rgb(115, 120, 220);
-        --hover-item-35: rgb(126, 131, 226);
-        --hover-item-45: rgb(138, 143, 233);
-        --hover-item-55: rgb(151, 156, 249);
+        --hover-item-25: rgb(30, 43, 147);
+        --hover-item-35: rgb(32, 47, 158);
+        --hover-item-45: rgb(36, 52, 174);
+        --hover-item-55: rgb(39, 56, 186);
     }
 }
 
@@ -160,6 +163,7 @@
 
 html {
     background-color: var(--main-bg);
+    color: var(--text-color)
 }
 
 body {
@@ -273,6 +277,7 @@ body {
 #menu_items ul li {
     list-style-type: none;
     padding: 0.1em 0.5em;
+    color: var(--text-color);
 }
 
 #menu_items ul li:hover, #menu_items ul li:active {
