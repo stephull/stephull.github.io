@@ -22,9 +22,9 @@
 }
 
 :root.dark {
-    --text-color: rgb(207, 207, 207);
+    --text-color: rgb(230, 230, 230);
     --main-bg: #181a1e;
-    --main-fg: rgb(27, 40, 138);
+    --main-fg: rgb(53, 52, 131);
     --main-op: white;
     --main-resume: rgb(188, 188, 0);
     --main-resume-hover: rgb(179, 152, 0);
@@ -32,17 +32,17 @@
     --main-menu-item-b: var(--main-op);
     --about-blockquote: rgba(127, 244, 255, 0.363);
     --hover-item-15: var(--main-fg);
-    --hover-item-25: rgb(30, 43, 147);
-    --hover-item-35: rgb(32, 47, 158);
-    --hover-item-45: rgb(36, 52, 174);
-    --hover-item-55: rgb(39, 56, 186);
+    --hover-item-25: rgb(57, 58, 126);
+    --hover-item-35: rgb(64, 62, 121);
+    --hover-item-45: rgb(67, 69, 115);
+    --hover-item-55: rgb(72, 74, 109);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --text-color: rgb(207, 207, 207);
+        --text-color: rgb(230, 230, 230);
         --main-bg: #181a1e;
-        --main-fg: rgb(27, 40, 138);
+        --main-fg: rgb(53, 52, 131);
         --main-op: white;
         --main-resume: rgb(188, 188, 0);
         --main-resume-hover: rgb(179, 152, 0);
@@ -50,10 +50,10 @@
         --main-menu-item-b: var(--main-op);
         --about-blockquote: rgba(127, 244, 255, 0.363);
         --hover-item-15: var(--main-fg);
-        --hover-item-25: rgb(30, 43, 147);
-        --hover-item-35: rgb(32, 47, 158);
-        --hover-item-45: rgb(36, 52, 174);
-        --hover-item-55: rgb(39, 56, 186);
+        --hover-item-25: rgb(57, 58, 126);
+        --hover-item-35: rgb(64, 62, 121);
+        --hover-item-45: rgb(67, 69, 115);
+        --hover-item-55: rgb(72, 74, 109);
     }
 }
 
@@ -121,6 +121,8 @@
 
 .vol-item, .exp-item, .proj-item {
     padding: 0.5em;
+    border: 2px solid var(--main-bg);
+    border-radius: 1em;
 }
 
 @keyframes item-hover {
@@ -219,22 +221,42 @@ body {
     user-select: none;
 }
 
-@keyframes rainbows {
-    0% {color: red;}
-    10% {color: salmon;}
-    20% {color: orange;}
-    30% {color: yellow;}
-    40% {color: greenyellow;}
-    50% {color: green;}
-    60% {color: cornflowerblue;}
-    70% {color: blue;}
-    80% {color: slateblue;}
-    90% {color: purple;}
+@keyframes rainbows { 
+    0% {
+        text-shadow: 5px 5px 5px red;
+    }
+    10% {
+        text-shadow: 5px 5px 5px salmon;
+    }
+    20% {
+        text-shadow: 5px 5px 5px orange;
+    }
+    30% {
+        text-shadow: 5px 5px 5px yellow;
+    }
+    40% {
+        text-shadow: 5px 5px 5px greenyellow;
+    }
+    50% {
+        text-shadow: 5px 5px 5px green;
+    }
+    60% {
+        text-shadow: 5px 5px 5px cornflowerblue;
+    }
+    70% {
+        text-shadow: 5px 5px 5px blue;
+    }
+    80% {
+        text-shadow: 5px 5px 5px slateblue;
+    }
+    90% {
+        text-shadow: 5px 5px 5px purple;
+    }
 }
 
 #name_title:hover, #name_title:active {
     animation-name: rainbows;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -247,6 +269,12 @@ body {
 #iconbin ul li {
     list-style-type: none;
     position: relative;
+}
+
+.iconbin_item_class a img:hover {
+    border: 1px solid white;
+    border-radius: 1em;
+    text-shadow: 50px 5px #fff;
 }
 
 #menu {
