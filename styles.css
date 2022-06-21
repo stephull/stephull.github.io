@@ -67,16 +67,8 @@
 
 /* education */
 
-.course-item-major:hover, .course-item-major:active {
-    background-color: rgba(255, 238, 0, 0.5);
-}
-
-.course-item-minor:hover, .course-item-minor:active {
-    background-color: rgba(89, 255, 0, 0.5);
-}
-
-.course-item-elective:hover, .course-item-elective:active {
-    background-color: rgba(195, 0, 255, 0.5);
+.coursework_table {
+    border-spacing: 10px;
 }
 
 /* projects */

@@ -17,12 +17,16 @@ window.onload = function() {
     }
 
     function requestMenuPage(src) {
-        let srcURL = refine(src);
-        DOMAIN.innerHTML = src;
-        fetch(srcURL)
-            .then((response) => response.text())
-            .then((text) => DOMAIN.innerHTML = text)
-            .catch((err) => console.error(err));
+        if (src === "home") {
+            window.location.reload();
+        } else {
+            let srcURL = refine(src);
+            DOMAIN.innerHTML = src;
+            fetch(srcURL)
+                .then((response) => response.text())
+                .then((text) => DOMAIN.innerHTML = text)
+                .catch((err) => console.error(err));
+        }
     }
 
     mitems.forEach(function(item) {
