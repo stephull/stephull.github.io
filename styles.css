@@ -2,6 +2,8 @@
 
 * {
     font-family: 'Ubuntu', sans-serif;
+    user-select: none;
+    max-width: 1200px;
 }
 
 :root, :root.light {
@@ -19,6 +21,7 @@
     --hover-item-35: rgb(166, 217, 248);
     --hover-item-45: rgb(182, 223, 248);
     --hover-item-55: rgb(197, 227, 245);
+    --proj-a: white;
 }
 
 :root.dark {
@@ -36,6 +39,7 @@
     --hover-item-35: rgb(64, 62, 121);
     --hover-item-45: rgb(67, 69, 115);
     --hover-item-55: rgb(72, 74, 109);
+    --proj-a: green;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,7 +58,13 @@
         --hover-item-35: rgb(64, 62, 121);
         --hover-item-45: rgb(67, 69, 115);
         --hover-item-55: rgb(72, 74, 109);
+        --proj-a: green;
     }
+}
+
+#projects a {
+    background-color: black;
+    color: var(--proj-a);
 }
 
 /* about  */
@@ -71,6 +81,11 @@
     border-spacing: 10px;
 }
 
+.coursework_table td {
+    border: 0.5px solid gray;
+    padding: 10px;
+}
+
 /* projects */
 
 .skill-div {
@@ -82,7 +97,7 @@
     padding: 0.5em 0.5em;
 }
 
-.skill-item:hover {
+.skill-item:hover .skill-item:active {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 1em;
 }
@@ -115,37 +130,35 @@
     padding: 0.5em;
     border: 2px solid var(--main-bg);
     border-radius: 1em;
+    margin-bottom: 1em;
 }
 
 @keyframes item-hover {
     0% {
         background-color: var(--hover-item-15);
-        border-radius: 0em;
-        padding: 0.5em;
+        border-radius: 1em;
     }
     25% {
         background-color: var(--hover-item-25);
-        border-radius: 0.1em;
-        padding: 0.625em;
+        border-radius: 0.5em;
     }
     50% {
         background-color: var(--hover-item-35);
         border-radius: 0.25em;
-        padding: 0.75em;
     }
     75% {
         background-color: var(--hover-item-45);
-        border-radius: 0.5em;
-        padding: 0.875em;
+        border-radius: 0.1em;
     }
     100% {
         background-color: var(--hover-item-55);
-        border-radius: 1em;
-        padding: 1em;
+        border-radius: 0em;
     }
 }
 
-.vol-item:hover, .vol-item:active, .exp-item:hover, .exp-item:active, .proj-item:hover, .proj-item:active {
+.vol-item:hover, .vol-item:active, 
+.exp-item:hover, .exp-item:active, 
+.proj-item:hover, .proj-item:active {
     animation-name: item-hover;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -157,7 +170,7 @@
 
 html {
     background-color: var(--main-bg);
-    color: var(--text-color)
+    color: var(--text-color);
 }
 
 body {
@@ -171,6 +184,9 @@ body {
     text-decoration:none; 
     color:black; 
     padding-left:1em;
+    /* for now, until after update*/
+    visibility: hidden;
+    pointer-events: none;
 }
 
 #resume {
@@ -263,7 +279,8 @@ body {
     position: relative;
 }
 
-.iconbin_item_class a img:hover {
+.iconbin_item_class a img:hover,
+.iconbin_item_class a img:active {
     border: 1px solid white;
     border-radius: 1em;
     text-shadow: 50px 5px #fff;

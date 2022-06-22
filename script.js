@@ -6,6 +6,7 @@ window.onload = function() {
     let mitems = Array.from(
         milist.querySelectorAll('.menu_items_button_class')
     );
+    let x = document.getElementById("poof");
 
     let curr = null;
     function refine(src) {
@@ -17,16 +18,13 @@ window.onload = function() {
     }
 
     function requestMenuPage(src) {
-        if (src === "home") {
-            window.location.reload();
-        } else {
-            let srcURL = refine(src);
-            DOMAIN.innerHTML = src;
-            fetch(srcURL)
-                .then((response) => response.text())
-                .then((text) => DOMAIN.innerHTML = text)
-                .catch((err) => console.error(err));
-        }
+        let srcURL = refine(src);
+        DOMAIN.innerHTML = src;
+        x.style.display = 'none';
+        fetch(srcURL)
+            .then((response) => response.text())
+            .then((text) => DOMAIN.innerHTML = text)
+            .catch((err) => console.error(err));
     }
 
     mitems.forEach(function(item) {
