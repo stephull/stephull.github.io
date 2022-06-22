@@ -33,7 +33,6 @@ window.onload = function() {
     })
 
     // enable dark and/or light mode
-    // SOURCE: https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting
     function detectDarkMode() {
         var c = document.documentElement.classList;
         if (c.contains('light')) {
@@ -58,4 +57,5 @@ window.onload = function() {
             detectDarkMode();
         }, 2000)
     })
+
 }
