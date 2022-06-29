@@ -52,6 +52,8 @@ window.onload = function() {
     darkMode.addEventListener('click', function() {
         const temp = document.getElementById('dark-test');
         temp.innerHTML = "Changing color scheme...";
+        temp.style.color = 'white';
+        temp.style.backgroundColor = 'black';
         setTimeout(function() {
             temp.innerHTML = "";
             detectDarkMode();

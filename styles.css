@@ -61,7 +61,7 @@
     }
 }
 
-#projects a, #other a {
+#projects a, #other a, .resources a {
     background-color: black;
     color: var(--proj-a);
 }
@@ -82,6 +82,9 @@
 
 .coursework_table {
     border-spacing: 10px;
+    background-color: var(--main-bg);
+    border-radius: 1em;
+    padding: 1em;
 }
 
 .coursework_table td {
@@ -98,11 +101,14 @@
 
 .skill-item {
     padding: 0.5em 0.5em;
+    margin-right: 0.25em;
+    margin-bottom: 0.25em;
+    background-color: rgba(255, 255, 255, 0.396);
+    border-radius: 1em;
 }
 
-.skill-item:hover .skill-item:active {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 1em;
+.skill-item b {
+    color: black;
 }
 
 .skill-item div {
@@ -123,10 +129,28 @@
     display: inline;
 }
 
+.proj-item-top section {
+    display: flex;
+    flex-direction: row;
+}
+
+.proj-item-top section h5 {
+    padding-top: 0.15em;
+    font-weight: 500;
+}
+
 .proj-pic {
     max-width: 250px;
     border-radius: 2em;
     padding: 1em;
+}
+
+.course-tidbit {
+    font-size: smaller;
+    margin-top: 1em;
+    padding-left: 1em;
+    list-style-type: none;
+    border-left: 3px solid green;
 }
 
 /* other non-main contents*/
@@ -141,6 +165,7 @@
 #art-table img {
     width: 300px;
     height: fit-content;
+    max-height: 150px;
     border: 1px solid black;
 }
 
@@ -182,7 +207,7 @@
 .exp-item:hover, .exp-item:active, 
 .proj-item:hover, .proj-item:active {
     animation-name: item-hover;
-    animation-duration: 0.5s;
+    animation-duration: 0.25s;
     animation-timing-function: linear;
     animation-direction: normal;
     animation-fill-mode: forwards;
@@ -265,50 +290,6 @@ body {
     background-color: lightgray;
 }
 
-#name_title {
-    user-select: none;
-}
-
-@keyframes rainbows { 
-    0% {
-        text-shadow: 5px 5px 5px red;
-    }
-    10% {
-        text-shadow: 5px 5px 5px salmon;
-    }
-    20% {
-        text-shadow: 5px 5px 5px orange;
-    }
-    30% {
-        text-shadow: 5px 5px 5px yellow;
-    }
-    40% {
-        text-shadow: 5px 5px 5px greenyellow;
-    }
-    50% {
-        text-shadow: 5px 5px 5px green;
-    }
-    60% {
-        text-shadow: 5px 5px 5px cornflowerblue;
-    }
-    70% {
-        text-shadow: 5px 5px 5px blue;
-    }
-    80% {
-        text-shadow: 5px 5px 5px slateblue;
-    }
-    90% {
-        text-shadow: 5px 5px 5px purple;
-    }
-}
-
-#name_title:hover, #name_title:active {
-    animation-name: rainbows;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
 #top {
     display: flex;
     flex-direction: row;
@@ -362,4 +343,10 @@ body {
     background-color: var(--main-menu-item-b);
     border-radius: 1.5em;
     user-select: none;
+}
+
+#homepage-intro {
+    padding: 0 1em;
+    border-left: 5px solid rgba(0, 128, 0, 0.836);
+    max-width: 840px;
 }
