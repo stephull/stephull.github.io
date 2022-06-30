@@ -295,6 +295,11 @@ body {
     flex-direction: row;
 }
 
+#iconbin {
+    padding-right: 1em;
+    max-width: 100px;
+}
+
 #iconbin ul li {
     list-style-type: none;
     position: relative;
@@ -304,7 +309,8 @@ body {
 .iconbin_item_class a img:active {
     border: 1px solid white;
     border-radius: 1em;
-    text-shadow: 50px 5px #fff;
+    text-shadow: 10px 1px #fff;
+    background-color: white;
 }
 
 #menu {
@@ -349,4 +355,9 @@ body {
     padding: 0 1em;
     border-left: 5px solid rgba(0, 128, 0, 0.836);
     max-width: 840px;
+}
+
+#name_title {
+    font-weight: 400;
+    font-size: 30px;
 }
