@@ -58,6 +58,14 @@ window.onload = function() {
             temp.innerHTML = "";
             detectDarkMode();
         }, 2000)
-    })
+    });
 
+    // want to make descriptions for art
+    const artDisplays = document.querySelectorAll(".art-display");
+    Array.from(artDisplays).forEach((link) => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.alert(link.id);
+        })
+    })
 }

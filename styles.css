@@ -15,53 +15,56 @@
     --main-menu-item: black;
     --main-menu-item-b: black;
     --about-blockquote: rgba(127, 244, 255, 0.363);
-    --hover-item-15: var(--main-fg);
-    --hover-item-25: rgb(146, 209, 248);
-    --hover-item-35: rgb(166, 217, 248);
-    --hover-item-45: rgb(182, 223, 248);
-    --hover-item-55: rgb(197, 227, 245);
+    --hover-item-15: rgb(128, 202, 248);
+    --hover-item-25: rgb(121, 198, 246);
+    --hover-item-35: rgb(114, 194, 243);
+    --hover-item-45: rgb(107, 190, 240);
+    --hover-item-55: rgb(100, 186, 238);
     --proj-a: white;
+    --icon-bg: rgba(0, 0, 255, 0);
 }
 
 :root.dark {
     --text-color: rgb(230, 230, 230);
     --main-bg: #181a1e;
-    --main-fg: rgb(53, 52, 131);
+    --main-fg: rgb(30, 40, 54);
     --main-op: white;
     --main-resume: rgb(188, 188, 0);
     --main-resume-hover: rgb(179, 152, 0);
     --main-menu-item: var(--main-fg);
     --main-menu-item-b: var(--main-op);
     --about-blockquote: rgba(127, 244, 255, 0.363);
-    --hover-item-15: var(--main-fg);
-    --hover-item-25: rgb(57, 58, 126);
-    --hover-item-35: rgb(64, 62, 121);
-    --hover-item-45: rgb(67, 69, 115);
-    --hover-item-55: rgb(72, 74, 109);
+    --hover-item-15: rgb(29, 37, 48);
+    --hover-item-25: rgb(28, 34, 42);
+    --hover-item-35: rgb(26, 31, 36);
+    --hover-item-45: rgb(25, 28, 30);
+    --hover-item-55: rgb(24, 25, 24);
     --proj-a: green;
+    --icon-bg: gray;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --text-color: rgb(230, 230, 230);
         --main-bg: #181a1e;
-        --main-fg: rgb(53, 52, 131);
+        --main-fg: rgb(30, 40, 54);
         --main-op: white;
         --main-resume: rgb(188, 188, 0);
         --main-resume-hover: rgb(179, 152, 0);
         --main-menu-item: var(--main-fg);
         --main-menu-item-b: var(--main-op);
         --about-blockquote: rgba(127, 244, 255, 0.363);
-        --hover-item-15: var(--main-fg);
-        --hover-item-25: rgb(57, 58, 126);
-        --hover-item-35: rgb(64, 62, 121);
-        --hover-item-45: rgb(67, 69, 115);
-        --hover-item-55: rgb(72, 74, 109);
+        --hover-item-15: rgb(29, 37, 48);
+        --hover-item-25: rgb(28, 34, 42);
+        --hover-item-35: rgb(26, 31, 36);
+        --hover-item-45: rgb(25, 28, 30);
+        --hover-item-55: rgb(24, 25, 24);
         --proj-a: green;
+        --icon-bg: gray;
     }
 }
 
-#projects a, #other a, .resources a {
+#projects a, #other a, .resources a, #footer-a {
     background-color: black;
     color: var(--proj-a);
 }
@@ -142,7 +145,8 @@
 .proj-pic {
     max-width: 250px;
     border-radius: 2em;
-    padding: 1em;
+    margin: 1em;
+    border: 2px solid black;
 }
 
 .course-tidbit {
@@ -207,8 +211,8 @@
 .exp-item:hover, .exp-item:active, 
 .proj-item:hover, .proj-item:active {
     animation-name: item-hover;
-    animation-duration: 0.25s;
-    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
     animation-direction: normal;
     animation-fill-mode: forwards;
 }
@@ -269,10 +273,11 @@ body {
 }
 
 #dark-a {
-    user-select:none;
+    user-select: none;
     text-decoration:none; 
     color:black; 
-    padding-left:1em;
+    margin-left: -5em;
+    margin-top: 0.5em;
     font-size: small;
 }
 
@@ -295,8 +300,14 @@ body {
     flex-direction: row;
 }
 
+#icons {
+    margin: 1em 1em 2em 2em;
+    padding-left: -3em;
+    background-color: var(--icon-bg);
+    border-radius: 1.5em
+}
+
 #iconbin {
-    padding-right: 1em;
     max-width: 100px;
 }
 
@@ -335,7 +346,7 @@ body {
     padding: 1em;
     color: var(--main-menu-item);
     background-color: var(--main-bg);
-    border-radius: 1em;
+    border-radius: 0.5em;
 }
 
 #menu_items ul li {
@@ -344,11 +355,37 @@ body {
     color: var(--text-color);
 }
 
+@keyframes list-animate {
+    0% {
+        border-radius: 0em;
+        opacity: 100%;
+    }
+    25% {
+        border-radius: 0.1em;
+        opacity: 80%;
+    }
+    50% {  
+        border: 0.25em;
+        opacity: 50%;
+    }
+    75% {
+        border: 0.5em;
+        opacity: 20%;
+    }
+    100% {
+        border-radius: 1em;
+        opacity: 5%;
+    }
+}
+
 #menu_items ul li:hover, #menu_items ul li:active {
     color: var(--main-bg);
     background-color: var(--main-menu-item-b);
-    border-radius: 1.5em;
-    user-select: none;
+    animation: list-animate;
+    animation-duration: 0.1s;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
 }
 
 #homepage-intro {
@@ -359,5 +396,11 @@ body {
 
 #name_title {
     font-weight: 400;
-    font-size: 30px;
+    font-size: 35px;
+}
+
+#index-footer {
+    background-color:rgba(95, 95, 95, 0.23);
+    padding: 1em;
+    border-radius: 1em;
 }
