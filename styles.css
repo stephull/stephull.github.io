@@ -173,10 +173,6 @@
     border: 1px solid black;
 }
 
-#art-table img:hover {
-    opacity: 80%;
-}
-
 .vol-item, .exp-item, .proj-item {
     padding: 0.5em 1.5em;
     border: 2px solid var(--main-bg);
@@ -403,4 +399,38 @@ body {
     background-color:rgba(95, 95, 95, 0.23);
     padding: 1em;
     border-radius: 1em;
+}
+
+@keyframes show-art {
+    0% {
+        opacity: 80%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 15%;
+    }
+}
+
+#art-table td:hover ~ #art-table img {
+    animation: show-art;
+    animation-fill-mode:forwards;
+    animation-direction:normal;
+    animation-timing-function: linear;
+    animation-duration: 0.5s; 
+}
+
+#art-alt {
+    display: none;
+    font-size: smaller;
+    background-color: rgba(0, 0, 0, 0.526);
+    color: white;
+}
+
+#art-table td:hover > #art-alt {
+    display: block;
+    margin-top: -3em;
+    padding-left: 5px;
+    position: relative;
 }
