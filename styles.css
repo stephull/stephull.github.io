@@ -144,9 +144,24 @@
 
 .proj-pic {
     max-width: 250px;
-    border-radius: 2em;
+    border-radius: 1em;
     margin: 1em;
     border: 2px solid black;
+}
+
+@keyframes proj-animate {
+    0% {border-radius: 1em;}
+    33% {border-radius: 0.75em;}
+    67% {border-radius: 0.4em;}
+    100% {border-radius: 0em;}
+}
+
+.proj-pic:hover {
+    animation-name: proj-animate;
+    animation-duration: 0.1s;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 
 .course-tidbit {
@@ -426,6 +441,7 @@ body {
     font-size: smaller;
     background-color: rgba(0, 0, 0, 0.526);
     color: white;
+    max-width: 300px;
 }
 
 #art-table td:hover > #art-alt {
