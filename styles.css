@@ -79,10 +79,6 @@
 
 /* education */
 
-#future {
-    background-color: rgba(0, 255, 4, 0.212);
-}
-
 .coursework_table {
     border-spacing: 10px;
     background-color: var(--main-bg);
