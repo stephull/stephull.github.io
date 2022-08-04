@@ -256,13 +256,18 @@ body {
 }
 
 #resume-a {
-    user-select:none;
-    text-decoration:none; 
+    user-select: none;
+    text-decoration: none; 
     color:black; 
-    padding-left:1em;
-    /* for now, until after update*/
-    visibility: hidden;
-    pointer-events: none;
+    padding-left: 1em;
+    margin-top: 0.35em;
+    margin-right: 1em;
+    margin-left: -0.5em;
+}
+
+#resume-a p {
+    font-size: 0.75em;
+    font-weight: bold;
 }
 
 #resume {
@@ -283,8 +288,8 @@ body {
     user-select: none;
     text-decoration:none; 
     color:black; 
-    margin-left: -5em;
-    margin-top: 0.5em;
+    margin-left: 1em;
+    margin-top: 0.15em;
     font-size: small;
 }
 
